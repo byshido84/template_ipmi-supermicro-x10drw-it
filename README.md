@@ -2,16 +2,17 @@
 Template for the X10DRW-IT motherboard which includes:
 
 
-**Applications (4)**:
+**Applications (5)**:
 
 
 * Fans - 6 items
 * Power Supply - 2 items
-* Temperature - 23 items
-* Voltage - 13 items
+* Temperature - 28 items
+* Voltage - 15 items
+* System - 1 items
 
 
-**Items (46):**
+**Items (52):**
 
 
 * Fan 1 - Fans
