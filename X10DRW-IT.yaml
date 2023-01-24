@@ -1,6 +1,6 @@
 zabbix_export:
   version: '6.2'
-  date: '2023-01-19T07:47:58Z'
+  date: '2023-01-24T06:25:34Z'
   template_groups:
     -
       uuid: e960332b3f6c46a1956486d4f3f99fce
@@ -12,20 +12,20 @@ zabbix_export:
       name: 'IPMI - Supermicro - X10DRW-IT'
       description: |
         ## Overview
-        
         Template for the X10DRW-IT motherboard which includes:
         
         
-        **Applications (4)**:
+        **Applications (5)**:
         
         
         * Fans - 6 items
         * Power Supply - 2 items
-        * Temperature - 23 items
-        * Voltage - 13 items
+        * Temperature - 28 items
+        * Voltage - 15 items
+        * System - 1 items
         
         
-        **Items (46):**
+        **Items (52):**
         
         
         * Fan 1 - Fans
@@ -805,7 +805,7 @@ zabbix_export:
               newvalue: Present
   triggers:
     -
-      uuid: 2447af68d8294478ae34e23177d83793
+      uuid: dc9d68e19ed34828a77b519e41682942
       expression: 'last(/IPMI - Supermicro - X10DRW-IT/ipmi.supermicro.x10drw-it.cpu1.temp)>70 or last(/IPMI - Supermicro - X10DRW-IT/ipmi.supermicro.x10drw-it.cpu2.temp)>70'
       name: 'CPU temperature critical on {HOSTNAME}'
       priority: HIGH
@@ -819,6 +819,7 @@ zabbix_export:
       expression: 'last(/IPMI - Supermicro - X10DRW-IT/ipmi.supermicro.x10drw-it.fan1)>9000 or last(/IPMI - Supermicro - X10DRW-IT/ipmi.supermicro.x10drw-it.fan1)<100 or last(/IPMI - Supermicro - X10DRW-IT/ipmi.supermicro.x10drw-it.fan2)>9000 or last(/IPMI - Supermicro - X10DRW-IT/ipmi.supermicro.x10drw-it.fan2)<100 or last(/IPMI - Supermicro - X10DRW-IT/ipmi.supermicro.x10drw-it.fan3)>9000 or last(/IPMI - Supermicro - X10DRW-IT/ipmi.supermicro.x10drw-it.fan3)<100 or last(/IPMI - Supermicro - X10DRW-IT/ipmi.supermicro.x10drw-it.fan4)>9000 or last(/IPMI - Supermicro - X10DRW-IT/ipmi.supermicro.x10drw-it.fan4)<100 or last(/IPMI - Supermicro - X10DRW-IT/ipmi.supermicro.x10drw-it.fana)>9000 or last(/IPMI - Supermicro - X10DRW-IT/ipmi.supermicro.x10drw-it.fana)<100 or last(/IPMI - Supermicro - X10DRW-IT/ipmi.supermicro.x10drw-it.fanb)>9000 or last(/IPMI - Supermicro - X10DRW-IT/ipmi.supermicro.x10drw-it.fanb)<100'
       name: 'Fan critical on {HOSTNAME}'
       priority: HIGH
+      manual_close: 'YES'
     -
       uuid: 8ad56b22926c458187001be6113c0d1f
       expression: 'last(/IPMI - Supermicro - X10DRW-IT/ipmi.supermicro.x10drw-it.vmemabvrm.temp)>70 or last(/IPMI - Supermicro - X10DRW-IT/ipmi.supermicro.x10drw-it.vmemcdvrm.temp)>70 or last(/IPMI - Supermicro - X10DRW-IT/ipmi.supermicro.x10drw-it.vmemefvrm.temp)>70 or last(/IPMI - Supermicro - X10DRW-IT/ipmi.supermicro.x10drw-it.vmemghvrm.temp)>70'
